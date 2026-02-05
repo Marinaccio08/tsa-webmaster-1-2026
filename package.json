@@ -1,0 +1,11 @@
+{
+  "name": "tsa-webmaster-1-2026",
+  "version": "1.0.0",
+  "description": "tsa webmaster 1 2026 community website project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
