@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "tsa webmaster 1 2026 community website project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node server.js",
     "build": "vite build",
     "preview": "vite preview",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "firebase": "^12.9.0"
+    "express": "^5.2.1",
+    "firebase": "^12.9.0",
+    "nunjucks": "^3.2.4",
+    "vite-express": "^0.22.1"
   },
   "devDependencies": {
     "vite": "^6.4.1"
