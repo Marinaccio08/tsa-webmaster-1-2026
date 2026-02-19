@@ -15,4 +15,7 @@ app.get("/", (req, res) => {
     res.render("example.html")
 })
 
-ViteExpress.listen(app, 5173, () => console.log("Server is listening..."));
+ViteExpress.listen(app, 5173, () => {
+    console.log("Server is listening...")
+    console.log("Launch http://localhost:5173/")
+});
