@@ -12,7 +12,11 @@ nunjucks.configure('views', {
 app.use(express.static('public'))
 
 app.get("/", (req, res) => {
-    res.render("example.html")
+    res.render("index.html")
+})
+
+app.get("/submit-resource", (req, res) => {
+    res.render("submit-resource.html")
 })
 
 ViteExpress.listen(app, 5173, () => {
