@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Monmouth County</title>
     {% block header %}
     {% endblock %}
     <!-- if development -->
@@ -14,6 +14,48 @@
 </head>
 <body>
     <h1>html yippee</h1>
+    <div id="page-wrapper">
+    <!-- Navigation Bar -->
+    <nav id="navigation_box">
+      <div id="left_navigation_box">
+        <a href="index" class="active">Home</a>
+        <a href="add">Additional Content</a>
+        <a href="forum">Community</a>
+        <a href="submit-resource">Form Submission</a>
+      </div>
+      <div id="right_navigation_box">
+        <a href="signIn">Sign In!!!</a>
+        <a href="register" class="signup-btn">Sign Up</a>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <section class="hero">
+        <h1>Explore Monmouth County</h1>
+        <p>Your digital hub for local news, community forums, and county services.</p>
+        <div class="cta-group">
+          <a href="forum" class="primary-btn">Join the Community</a>
+          <a href="submit-resource" class="secondary-btn">View Content</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Contact Us</h2>
+                <p>Email: hello@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <a href="#">Form</a>
+            </div>
+            <div class="footer-right">
+                <a href="">Home</a>
+                <a href="#">Forum</a>
+                <a href="#">Directory</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+  </div>
     {% block content %}
     {% endblock %}
 </body>

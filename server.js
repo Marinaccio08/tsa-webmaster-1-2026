@@ -1,6 +1,7 @@
 import express from "express";
 import ViteExpress from "vite-express";
 import nunjucks from "nunjucks";
+import path from "path";
 
 const app = express();
 
@@ -13,6 +14,26 @@ app.use(express.static('public'))
 
 app.get("/", (req, res) => {
     res.render("index.html")
+})
+
+app.get("/about", (req, res) => {
+    res.render("about.html")
+})
+
+app.get("/add", (req, res) => {
+    res.render("add.html")
+})
+
+app.get("/register", (req, res) => {
+    res.render("register.html")
+})
+
+app.get("/signIn", (req, res) => {
+    res.render("signIn.html")
+})
+
+app.get("/forum", (req, res) => {
+    res.render("forum.html")
 })
 
 app.get("/submit-resource", (req, res) => {
