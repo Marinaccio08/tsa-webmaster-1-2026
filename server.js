@@ -1,7 +1,6 @@
 import express from "express";
 import ViteExpress from "vite-express";
 import nunjucks from "nunjucks";
-import path from "path";
 
 const app = express();
 
