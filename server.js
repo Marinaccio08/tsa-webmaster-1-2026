@@ -1,6 +1,7 @@
 import express from "express";
 import ViteExpress from "vite-express";
 import nunjucks from "nunjucks";
+import firebaseConfig from './config.js';
 
 const app = express();
 
@@ -9,7 +10,9 @@ nunjucks.configure('views', {
     express: app
 });
 
+app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'))
+app.use(express.json())
 
 app.get("/", (req, res) => {
     res.render("index.html")
@@ -40,7 +43,8 @@ app.get("/submit-resource", (req, res) => {
 })
 
 app.post("/submit-resource", (req, res) => {
-    console.log(req)
+    //console.log(req.body)
+    console.log(firebaseConfig);
 })
 
 ViteExpress.listen(app, 5173, () => {

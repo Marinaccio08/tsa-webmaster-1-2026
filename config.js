@@ -18,4 +18,3 @@ export const dbApp = initializeApp(firebaseConfig);
 
 // Initialize Firebase Auth
 export const auth = getAuth(dbApp);
-
