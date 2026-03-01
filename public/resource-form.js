@@ -2,7 +2,6 @@ const resourceDropdown = document.getElementById("resourceType");
 
 resourceDropdown.onchange = () => {
     const selectedValue = resourceDropdown.value;
-
     switch (selectedValue) {
         case "nonprofit":
             document.getElementById("addressBox").classList.remove("hidden");
@@ -36,3 +35,14 @@ resourceDropdown.onchange = () => {
             break;
     }
 }
+
+const dateCheckbox = document.getElementById("isMultiDay")
+dateCheckbox.addEventListener("input", () => {
+    if (dateCheckbox.value) {
+        document.getElementById("dateRange").classList.remove("hidden")
+        document.getElementById("singleDate").classList.add("hidden")
+    } else {
+        document.getElementById("dateRange").classList.remove("hidden")
+        document.getElementById("singleDate").classList.add("hidden")
+    }
+})
