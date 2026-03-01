@@ -5,13 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
-  apiKey: process.env.FIREBASE_APIKEY,
+  apiKey: import.meta.env.FIREBASE_APIKEY,
   authDomain: "tsa-webmaster-1.firebaseapp.com",
   databaseURL: "https://tsa-webmaster-1-default-rtdb.firebaseio.com",
   projectId: "tsa-webmaster-1",
   storageBucket: "tsa-webmaster-1.firebasestorage.app",
   messagingSenderId: "344004193042",
-  appId: process.env.FIREBASE_APPID
+  appId: import.meta.env.FIREBASE_APPID
 };
 
 // Initialize Firebase

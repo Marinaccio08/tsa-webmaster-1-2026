@@ -1,4 +1,4 @@
-import {firebaseConfig} from "./index.js"
+import {firebaseConfig} from "./config.js"
 
 
 document.getElementById('submitData').onclick = function() {
