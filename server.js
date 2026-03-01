@@ -39,6 +39,10 @@ app.get("/submit-resource", (req, res) => {
     res.render("submit-resource.html")
 })
 
+app.post("/submit-resource", (req, res) => {
+    console.log(req)
+})
+
 ViteExpress.listen(app, 5173, () => {
     console.log("Server is listening...")
     console.log("Launch http://localhost:5173/")

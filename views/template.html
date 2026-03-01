@@ -14,7 +14,7 @@
 </head>
 <body>
     <h1>html yippee</h1>
-    <div id="page-wrapper">
+    <div id="page-wrapper" class="m-2">
     <!-- Navigation Bar -->
     <nav id="navigation_box">
       <div id="left_navigation_box">
@@ -30,14 +30,16 @@
     </nav>
 
     <main id="main-content">
-      <section class="hero">
-        <h1>Explore Monmouth County</h1>
-        <p>Your digital hub for local news, community forums, and county services.</p>
-        <div class="cta-group">
-          <a href="forum" class="primary-btn">Join the Community</a>
-          <a href="submit-resource" class="secondary-btn">View Content</a>
-        </div>
-      </section>
+      {% block content %}
+        <section class="hero">
+          <h1>Explore Monmouth County</h1>
+          <p>Your digital hub for local news, community forums, and county services.</p>
+          <div class="cta-group">
+            <a href="forum" class="primary-btn">Join the Community</a>
+            <a href="submit-resource" class="secondary-btn">View Content</a>
+          </div>
+        </section> 
+      {% endblock %}
     </main>
     <footer class="footer">
         <div class="footer-container">
@@ -56,7 +58,5 @@
         </div>
     </footer>
   </div>
-    {% block content %}
-    {% endblock %}
 </body>
 </html>
