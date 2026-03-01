@@ -16,8 +16,6 @@ const firebaseConfig = {
   appId: process.env.FIREBASE_APPID
 };
 
-console.log(process.env.FIREBASE_APIKEY)
-
 // Initialize Firebase
 export const dbApp = initializeApp(firebaseConfig);
 
