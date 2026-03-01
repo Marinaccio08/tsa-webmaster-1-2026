@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monmouth County</title>
-    {% block header %}
-    {% endblock %}
-    <!-- if development -->
-    <script type="module" src="http://localhost:5173/@vite/client"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monmouth County</title>
+  <script type="module" src="/src/authState.js"></script>
+  {% block header %}
+  {% endblock %}
+  <!-- if development -->
+  <script type="module" src="http://localhost:5173/@vite/client"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link rel="stylesheet" href="/output.css">
-    <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/output.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
+
 <body>
-    <h1>html yippee</h1>
-    <div id="page-wrapper" class="m-2">
+  <h1>html yippee</h1>
+  <div id="page-wrapper" class="m-2">
     <!-- Navigation Bar -->
     <nav id="navigation_box">
       <div id="left_navigation_box">
@@ -26,39 +29,42 @@
         <a href="/submit-resource">Form Submission</a>
       </div>
       <div id="right_navigation_box">
-        <a href="/signIn">Sign In!!!</a>
-        <a href="/register" class="signup-btn">Sign Up</a>
+        <span id="user-greeting" style="display:none;"></span>
+        <a href="#" id="signout-btn" style="display:none;">Sign Out</a>
+        <a href="/signIn" id="nav-signin">Sign In</a>
+        <a href="/register" id="nav-signup" class="signup-btn">Sign Up</a>
       </div>
     </nav>
 
     <main id="main-content">
       {% block content %}
-        <section class="hero">
-          <h1>Explore Monmouth County</h1>
-          <p>Your digital hub for local news, community forums, and county services.</p>
-          <div class="cta-group">
-            <a href="forum" class="primary-btn">Join the Community</a>
-            <a href="submit-resource" class="secondary-btn">View Content</a>
-          </div>
-        </section> 
+      <section class="hero">
+        <h1>Explore Monmouth County</h1>
+        <p>Your digital hub for local news, community forums, and county services.</p>
+        <div class="cta-group">
+          <a href="forum" class="primary-btn">Join the Community</a>
+          <a href="submit-resource" class="secondary-btn">View Content</a>
+        </div>
+      </section>
       {% endblock %}
     </main>
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h2>Contact Us</h2>
-                <p>Email: hello@example.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <a href="#">Form</a>
-            </div>
-            <div class="footer-right">
-                <a href="">Home</a>
-                <a href="#">Forum</a>
-                <a href="#">Directory</a>
-                <a href="#">FAQ</a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-left">
+          <h2>Contact Us</h2>
+          <p>Email: hello@example.com</p>
+          <p>Phone: (123) 456-7890</p>
+          <a href="#">Form</a>
         </div>
+        <div class="footer-right">
+          <a href="">Home</a>
+          <a href="#">Forum</a>
+          <a href="#">Directory</a>
+          <a href="#">FAQ</a>
+        </div>
+      </div>
     </footer>
   </div>
 </body>
+
 </html>
