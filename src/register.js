@@ -1,5 +1,6 @@
-import { auth } from "../config.js";
+import { auth, db } from "../config.js";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { ref, set } from "firebase/database";
 
 document.getElementById("submitData").onclick = async function () {
   const firstName = document.getElementById("firstName").value.trim();
@@ -21,10 +22,20 @@ document.getElementById("submitData").onclick = async function () {
   try {
     // Create the user account in Firebase Auth
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
 
     // Store first + last name in the user profile's displayName
-    await updateProfile(userCredential.user, {
+    await updateProfile(user, {
       displayName: firstName + " " + lastName,
+    });
+
+    // Save user data to Realtime Database
+    await set(ref(db, "users/" + user.uid), {
+      email: email,
+      username: firstName + " " + lastName,
+      firstName: firstName,
+      lastName: lastName,
+      description: "",
     });
 
     alert("Account created successfully! Welcome, " + firstName + "!");
