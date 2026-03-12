@@ -18,22 +18,34 @@
 </head>
 
 <body>
-  <h1>html yippee</h1>
   <div id="page-wrapper" class="m-2">
     <!-- Navigation Bar -->
     <nav id="navigation_box">
+      <h1 class="header-title">Monmouth County</h1>
+
       <div id="left_navigation_box">
-        <a href="/" class="active">Home</a>
-        <a href="/add">Additional Content</a>
-        <a href="/forum">Community</a>
-        <a href="/submit-resource">Form Submission</a>
-      </div>
-      <div id="right_navigation_box">
         <span id="user-greeting" style="display:none;"></span>
         <a href="#" id="signout-btn" style="display:none;">Sign Out</a>
         <a href="/signIn" id="nav-signin">Sign In</a>
         <a href="/register" id="nav-signup" class="signup-btn">Sign Up</a>
       </div>
+
+
+      <div id="right_navigation_box">
+         <div class="dropdown">
+          <button class="dropbtn">
+            <img src="../assets/menu-button.png" style="width: 50px; height:50px;">
+          </button>
+          <div class="dropdown-content">
+            <a href="/" class="active">Home</a>
+            <a href="/add">Additional Content</a>
+            <a href="/forum">Community</a>
+            <a href="/submit-resource">Form Submission</a>
+          </div>
+        </div>
+      </div>
+
+      
     </nav>
 
     <main id="main-content">
@@ -48,6 +60,8 @@
       </section>
       {% endblock %}
     </main>
+
+
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-left">
@@ -64,6 +78,8 @@
         </div>
       </div>
     </footer>
+
+
   </div>
 </body>
 

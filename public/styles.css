@@ -10,3 +10,79 @@
         font-size: 28px;
     }
 }
+
+.body{
+    margin: 0;
+}
+
+/* index */
+.index-container{
+    background-image: url("../assets/nature-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+}
+
+/* ---------- Universal Elements (navbar, footer, fonts, etc.)--------------- */
+
+#page-wrapper{
+    margin: 0;
+}
+
+/* Navbar */
+#navigation_box{
+    background-color: rgb(153, 128, 168);
+    display: flex;
+    overflow:hidden;
+    justify-content: flex-end;
+}
+
+.dropdown{
+    display:inline-block;
+}
+
+.header-title{
+    display: flex;
+    margin-right:auto;
+    
+    margin-left: 1vw;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0px;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #765b75;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #baa2b9;}
+
+#left_navigation_box{
+    justify-content: center;
+    align-content: center;
+}
+
+#nav-signin, #nav-signup{
+    margin-right: 1vw;
+}
+
+/* footer */
