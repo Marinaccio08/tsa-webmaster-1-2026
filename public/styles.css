@@ -1,12 +1,68 @@
 @layer theme, base, components, utilities;
-/*
+
 @import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/utilities.css" layer(utilities);*/
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@import url('https://fonts.googleapis.com');
 
 @layer base {
 
     h1 {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         font-size: 28px;
+    }
+
+    p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 10px;
+    padding: 10px 0;
+    }
+}
+@layer components {
+    .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://cdn.schema.io/fusus-atlanta/63ea6079c6a0dd00122a3e12/78e7b477d72031d524d3fa8b6b711c31');
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+    }
+
+    .header-box {
+        background: white;
+        padding: 40px;
+        width: 90%;
+        max-width: 500px;
+        text-align: left;
+        position: relative;
+        margin-bottom: 60px;
+    }
+
+    .cards-container {
+        display: flex;
+        gap: 30px;
+        margin-top: 50px;
+        align-items: flex-start;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        width: 220px;
+    }
+
+    .card-img {
+        background: #000000; /* placeholder */
+        height: 150px;
+        margin-bottom: 15px;
+    }
+    /* offset of cards */
+    .offset-1 { margin-top: 40px; }
+    .offset-2 { margin-top: 80px; }
+
+    .about-box {
+        background: white;
+        padding: 40px 80px;
+        margin: 40px 0;
     }
 }
