@@ -6,21 +6,23 @@
 
 {% block content %}
     <div class="page-container h-screen">
-        <form id="new-resource" action="/submit-resource" method="post" class="my-2 bg-white w-3/4 px-3">
+        <form id="new-resource" class="my-2 bg-white w-3/4 px-3">
             <h1>Submit New Community Resources</h1><br>
             <label for="rName" required>Resource Name</label>
             <input id="rName" name="rName" type="text" class="border-dashed border my-2">
             <br>
-            <label for="resourceType">Resource Type:</label>
-            <select id="resourceType" name="resourceType" required class="border-dashed border my-2">
-                <option hidden disabled selected value> -- select an option -- </option>
-                <option value="nonprofit">Non-profit</option>
-                <option value="event">Community Event</option>
-                <option value="program">Program</option>
-                <option value="hotline">Support Hotline</option>
-                <option value="info">Information Resource</option>
-                <!-- TODO: Add clarification of each type of resource -->
-            </select>
+            <div class="block">
+                <label for="resourceType">Resource Type:</label>
+                <select id="resourceType" name="resourceType" required class="border-dashed border my-2">
+                    <option hidden disabled selected value> -- select an option -- </option>
+                    <option value="nonprofit">Non-profit</option>
+                    <option value="event">Community Event</option>
+                    <option value="program">Program</option>
+                    <option value="hotline">Support Hotline</option>
+                    <option value="info">Information Resource</option>
+                    <!-- TODO: Add clarification of each type of resource -->
+                </select>
+            </div>
 
             <fieldset id="addressBox" class="hidden">
                 <legend>Address</legend>
@@ -68,11 +70,13 @@
                 <label for="link">Link</label>
                 <input type="url" name="link" id="link" class="border-dashed border my-2">
             </div>
-
+            <br>
             <label for="desc">Description</label>
             <textarea id="desc" name="desc" class="border-dashed border my-2"></textarea>
-
-            <input type="submit">
+            <br>
+            <label for="tags">Tags (separate with commas) </label>
+            <input type="text" name="tags" class="border-dashed border my-2">
+            <input class="px-3 bg-blue-500 text-white rounded-md block" type="submit">
         </form>
     </div>
 {% endblock %}
