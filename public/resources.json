@@ -1,0 +1,38 @@
+{
+    "resources": [{
+        "id": 0,
+        "rName": "Marlboro TAC (Teen Advisory Committee)",
+        "website": "https://www.marlboro-nj.gov/pages/teen-advisory-committee",
+        "desc": "Volunteer group for various events, such as soccer games, tutoring, supervising school dances, etc.",
+        "address": "1979 Township Drive\nMarlboro, NJ, 07746",
+        "contact": "732-536-0200"
+    }, {
+        "id": 1,
+        "rName": "Marlboro Farmer's Market",
+        "website": "https://www.marlboro-nj.gov/pages/farmers-market",
+        "desc": "Flea market open from jun-october on weekends and certain weekdays\nLocal farmers able to sell fresh produce here",
+        "address": "444 Route 520\nMarlboro, NJ, 07746",
+        "contact": "MFM@marlboro-nj.gov"
+    }, {
+        "id": 2,
+        "rName": "JBJ Soul Kitchen",
+        "website": "https://jbjsoulkitchen.org/",
+        "desc": "JBJ Soul Kitchen is a non-profit Community Restaurant established by the Jon Bon Jovi Soul Foundation, serving paying customers and those in-need.",
+        "address": "207 Monmouth Street\nRed Bank, NJ 07701",
+        "contact": "info@jbjsoulkitchen.org"
+    }, {
+        "id": 3,
+        "rName": "Shore To Help",
+        "website": "https://shore-to-help.com/our-success/",
+        "desc": "Monmouth non-profit group that connects volunteers with various charities, as well as planning their own fundraisers\nFunds go to various local charities (ex. Cure Kids Cancer, Cole Porter Foundation, Food Bank of Monmouth and Ocean Counties, and more)",
+        "address": "32A Beach Road\nMonmouth Beach, NJ 07750",
+        "contact": "info@shore-to-help.com"
+    }, {
+        "id": 4,
+        "rName": "Friendship Circle of New Jersey",
+        "website": "https://friendsnj.com/",
+        "desc": "The Friendship Circle of Central Jersey was founded with the goal of promoting a greater awareness and understanding of both the unique needs and the unique gifts of people with special needs, and encourages respect and empathy for those facing challenges.",
+        "address": "200 US 9, Suite 300\nManalapan, NJ 07726",
+        "contact": "732-536-2319"
+    }]
+}

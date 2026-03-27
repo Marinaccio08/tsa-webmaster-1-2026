@@ -2,6 +2,9 @@ import express from "express";
 import ViteExpress from "vite-express";
 import nunjucks from "nunjucks";
 
+import resources from "./public/resources.json" with { type: "json" }
+import { resolveConfig } from "vite";
+
 
 const app = express();
 
@@ -45,6 +48,10 @@ app.get("/submit-resource", (req, res) => {
 app.post("/submit-resource", (req, res) => {
     //console.log(req.body)
     console.log(req.body);
+})
+
+app.get("/directory", (req, res) => {
+    res.render("directory.html", {resources: resources.resources})
 })
 
 ViteExpress.listen(app, 5173, () => {
