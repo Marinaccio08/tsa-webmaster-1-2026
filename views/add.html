@@ -1,5 +1,68 @@
 {% extends "template.html" %}
 
 {% block content %}
-    <h2>about us: we exist</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monmouth County Featured</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="add-page">
+
+  <div class="page">
+
+    <div class="hero" style="background-image: url('/images/monmouth-county.jpg')">
+      <h1>MONMOUTH COUNTY</h1>
+    </div>
+
+    <div class="featured-section">
+
+      <div class="featured-label">FEATURED</div>
+
+      <div class="featured-grid">
+
+        <!-- upload fulfill.svg -->
+        <a href="https://fulfillnj.org/" target="_blank" rel="noopener noreferrer" class="featured-card">
+          <img src="/images/fulfill.jpg" alt="Fulfill NJ" />
+        </a>
+
+        <!-- upload marlboro.svg -->
+        <a href="https://www.marlboro-nj.gov/pages/teen-advisory-committee" target="_blank" rel="noopener noreferrer" class="featured-card">
+            <img src="/images/marlboro.jpg" alt="Marlboro Township" />
+          </a>
+        </a>
+
+        <!-- upload shoretohelp.svg -->
+        <a href="https://shore-to-help.com/" target="_blank" rel="noopener noreferrer" class="featured-card dark-card">
+          <img src="/images/shore.png" alt="Shore to Help" />
+        </a>
+
+        <!-- upload friendshipcircleofnewjersey.svg -->
+        <a href="https://fcnj.com/" target="_blank" rel="noopener noreferrer" class="featured-card">
+          <img src="/images/friendship.jpg" alt="Friendship Circle of New Jersey" />
+        </a>
+
+      </div>
+
+      <a href="/directory" class="view-all">&#9658; View All</a>
+
+    </div>
+
+    <footer class="footer">
+      <h3>Follow Monmouth County on social media for updates.</h3>
+      <div class="qr-codes">
+        <!-- upload qr1.png, qr2.png, qr3.png -->
+        <img src="/images/qr-1.jpg" alt="QR code 1" />
+        <img src="/images/qr-2.jpg" alt="QR code 2" />
+        <img src="/images/qr-3.jpg" alt="QR code 3" />
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
 {% endblock %}
