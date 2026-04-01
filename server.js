@@ -14,6 +14,7 @@ nunjucks.configure('views', {
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
+app.use('/assets', express.static('assets'))
 app.use(express.json())
 
 app.get("/", (req, res) => {
