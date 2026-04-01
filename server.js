@@ -53,7 +53,9 @@ app.get("/directory", (req, res) => {
     res.render("directory.html", {resources: resources.resources})
 })
 
-ViteExpress.listen(app, 5173, () => {
+const PORT = process.env.PORT || 5173;
+
+ViteExpress.listen(app, PORT, () => {
     console.log("Server is listening...")
-    console.log("Launch http://localhost:5173/")
+    console.log(`Launch http://localhost:${PORT}/`)
 });

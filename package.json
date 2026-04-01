@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node server.js",
     "dev": "node --watch-path=./src --watch-path=./views --watch-path=./public --watch-path=./.env server.js",
     "build": "vite build",
     "preview": "vite preview",
