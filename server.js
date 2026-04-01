@@ -3,7 +3,6 @@ import ViteExpress from "vite-express";
 import nunjucks from "nunjucks";
 
 import resources from "./public/resources.json" with { type: "json" }
-import { resolveConfig } from "vite";
 
 const app = express();
 
