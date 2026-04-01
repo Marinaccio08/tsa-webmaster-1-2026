@@ -605,18 +605,7 @@ html, body {
   color: #222222;
 }
 
-/* FOOTER */
-.add-html footer {
-  background-color: #0b3748;
-  text-align: center;
-  padding: 28px 60px 34px;
-  border-top: 1px solid #e0e0e0;
-  color: #ffffff;
-}
 
-.add-html h3{
-    text-align: center;
-}
 
 .qr-codes {
   margin-top: 16px;
