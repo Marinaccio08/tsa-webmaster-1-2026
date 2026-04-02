@@ -3,7 +3,6 @@ import ViteExpress from "vite-express";
 import nunjucks from "nunjucks";
 
 import resources from "./public/resources.json" with { type: "json" }
-import { resolveConfig } from "vite";
 
 const app = express();
 
@@ -14,6 +13,7 @@ nunjucks.configure('views', {
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
+app.use('/assets', express.static('assets'))
 app.use(express.json())
 
 app.get("/", (req, res) => {
@@ -53,7 +53,9 @@ app.get("/directory", (req, res) => {
     res.render("directory.html", {resources: resources.resources})
 })
 
-ViteExpress.listen(app, 5173, () => {
+const PORT = process.env.PORT || 5173;
+
+ViteExpress.listen(app, PORT, () => {
     console.log("Server is listening...")
-    console.log("Launch http://localhost:5173/")
+    console.log(`Launch http://localhost:${PORT}/`)
 });

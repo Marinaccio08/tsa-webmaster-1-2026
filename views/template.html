@@ -8,8 +8,7 @@
   <script type="module" src="/src/authState.js"></script>
   {% block header %}
   {% endblock %}
-  <!-- if development -->
-  <script type="module" src="http://localhost:5173/@vite/client"></script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
@@ -18,7 +17,7 @@
 </head>
 
 <body>
-  <div id="page-wrapper" class="m-2">
+  <div id="page-wrapper">
     <!-- Navigation Bar -->
     <nav id="navigation_box">
       <h1 class="header-title"><a href="/">Monmouth County</a></h1>
@@ -34,7 +33,7 @@
       <div id="right_navigation_box">
          <div class="dropdown">
           <button class="dropbtn">
-            <img src="../assets/menu-button.png" style="width: 50px; height:50px;">
+            <img src="/assets/menu-button.png" style="width: 50px; height:50px;">
           </button>
           <div class="dropdown-content">
             <a href="/" class="active">Home</a>
@@ -69,11 +68,16 @@
                 <!-- Contact Info -->
                 <div class="col footer-section">
                     <h2 class="footer-header"><b>Contact Us</b></h2>
-                    <h3 class="footer-text">Email: hello@example.com</h3>
-                    <h3 class="footer-text">Phone: (123) 456-7890</h3>
+                    <h3 class="footer-text">Email: contact@visitmonmouth.com</h3>
+                    <h3 class="footer-text">Phone: (732) 431-7000</h3>
                 </div>
                 <div class="col footer-section">
-                    <h2 class="footer-header"><b>Monmouth County Resources</b></h2>
+                    <h2 class="footer-header"><b>Follow Us</b></h2>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                      <img src="/images/qr-1.jpg" alt="QR code 1" style="width: 80px; height: 80px; border-radius: 8px; border: 1px solid #ddd;" />
+                      <img src="/images/qr-2.jpg" alt="QR code 2" style="width: 80px; height: 80px; border-radius: 8px; border: 1px solid #ddd;" />
+                      <img src="/images/qr-3.jpg" alt="QR code 3" style="width: 80px; height: 80px; border-radius: 8px; border: 1px solid #ddd;" />
+                    </div>
                 </div>
                 <!-- Links -->
                 <div class="col footer-section">
@@ -82,6 +86,7 @@
                     <a class="footer-text" href="/add">Additional Content</a>
                     <a class="footer-text" href="/forum">Forum</a>
                     <a class="footer-text" href="/directory">Directory</a>
+                    <a class="footer-text" href="https://drive.google.com/file/d/1hvBEATP7uxJZAKrM8HUkDtmCRFTOL8Jr/view?usp=sharing">Copyright Checklist</a>
                 </div>
             </div>
       </div>
