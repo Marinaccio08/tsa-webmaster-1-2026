@@ -635,13 +635,21 @@ html, body {
 .additional-content h2 {
   margin-top: 30px;
   font-size: 24px;
-  color: rgb(153, 128, 168);
+  color: #000000;
 }
 
 .additional-content p {
   margin-top: 10px;
   font-size: 16px;
   color: #333;
+}
+
+.section-divider {
+  width: 80%;
+  margin: 50px auto;
+  border: none;
+  border-top: 2px solid rgb(153, 128, 168); /* your site purple */
+  opacity: 0.3;
 }
 
 .qr-codes {
