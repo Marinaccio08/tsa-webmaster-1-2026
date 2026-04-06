@@ -1,195 +1,197 @@
 {% extends "template.html" %}
 
 {% block content %}
-<div class="reference-page" style="max-width: 900px; margin: 40px auto; padding: 0 24px 60px;">
+<div class="reference-page-container" style="background-color: #ffffff; min-height: 100vh; width: 100%;">
+  <div class="reference-page" style="max-width: 900px; margin: 0 auto; padding: 40px 24px 60px;">
 
-  <h1 style="font-size: 2rem; font-weight: 700; color: #1a3a5c; border-bottom: 3px solid #2e6da4; padding-bottom: 12px; margin-bottom: 28px;">
-    Reference Page
-  </h1>
+    <h1 style="font-size: 2rem; font-weight: 700; color: #1a3a5c; border-bottom: 3px solid #2e6da4; padding-bottom: 12px; margin-bottom: 28px;">
+      Reference Page
+    </h1>
 
-  <!-- ── Required Documents ── -->
-  <section style="margin-bottom: 40px;">
-    <h2 style="font-size: 1.25rem; font-weight: 700; color: #1a3a5c; margin-bottom: 14px;">Required Documents</h2>
-    <div style="display: flex; flex-direction: column; gap: 14px;">
+    <!-- ── Required Documents ── -->
+    <section style="margin-bottom: 40px;">
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: #1a3a5c; margin-bottom: 14px;">Required Documents</h2>
+      <div style="display: flex; flex-direction: column; gap: 14px;">
 
-      <div style="border: 1px solid #c9d8ec; border-radius: 8px; padding: 16px 20px; background: #f4f8ff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-        <div>
-          <p style="font-weight: 700; color: #1a3a5c; margin-bottom: 4px;">Student Copyright Checklist</p>
-          <p style="font-size: 0.9rem; color: #555;">Required by TSA Webmaster 1 rules (Forms Appendix). Completed PDF documenting copyright compliance for all materials used on this site.</p>
+        <div style="border: 1px solid #c9d8ec; border-radius: 8px; padding: 16px 20px; background: #f4f8ff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <p style="font-weight: 700; color: #1a3a5c; margin-bottom: 4px;">Student Copyright Checklist</p>
+            <p style="font-size: 0.9rem; color: #555;">Required by TSA Webmaster 1 rules (Forms Appendix). Completed PDF documenting copyright compliance for all materials used on this site.</p>
+          </div>
+          <a href="https://drive.google.com/file/d/1tbiUK3n-yfpTZqDFwCRXS5NwTX8HD5qU/view?usp=sharing"
+             target="_blank" rel="noopener"
+             style="display: inline-block; background: #1a3a5c; color: #fff; padding: 9px 18px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; white-space: nowrap;">
+            View PDF &rarr;
+          </a>
         </div>
-        <a href="https://drive.google.com/file/d/1tbiUK3n-yfpTZqDFwCRXS5NwTX8HD5qU/view?usp=sharing"
-           target="_blank" rel="noopener"
-           style="display: inline-block; background: #1a3a5c; color: #fff; padding: 9px 18px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; white-space: nowrap;">
-          View PDF &rarr;
-        </a>
-      </div>
 
-      <div id="worklog-card" style="border: 1px solid #c9d8ec; border-radius: 8px; padding: 16px 20px; background: #f4f8ff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-        <div>
-          <p style="font-weight: 700; color: #1a3a5c; margin-bottom: 4px;">Work Log</p>
-          <p style="font-size: 0.9rem; color: #555;">Detailed log of all team meetings, development milestones, individual contributions, and hours worked throughout the project lifecycle.</p>
+        <div id="worklog-card" style="border: 1px solid #c9d8ec; border-radius: 8px; padding: 16px 20px; background: #f4f8ff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+          <div>
+            <p style="font-weight: 700; color: #1a3a5c; margin-bottom: 4px;">Work Log</p>
+            <p style="font-size: 0.9rem; color: #555;">Detailed log of all team meetings, development milestones, individual contributions, and hours worked throughout the project lifecycle.</p>
+          </div>
+          <a id="worklog-link" href="#"
+             target="_blank" rel="noopener"
+             style="display: inline-block; background: #1a3a5c; color: #fff; padding: 9px 18px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; white-space: nowrap;">
+            View PDF &rarr;
+          </a>
         </div>
-        <a id="worklog-link" href="#"
-           target="_blank" rel="noopener"
-           style="display: inline-block; background: #1a3a5c; color: #fff; padding: 9px 18px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600; white-space: nowrap;">
-          View PDF &rarr;
-        </a>
+
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ── Framework Statement ── -->
+    <section style="margin-bottom: 40px;">
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: #1a3a5c; margin-bottom: 14px;">Framework Statement</h2>
+      <div style="border-left: 4px solid #2e6da4; padding: 14px 18px; background: #f4f8ff; border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.65;">
+        This website was built using <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>Nunjucks</strong> as frameworks, along with <strong>Vite</strong> for frontend bundling, <strong>Firebase</strong> for authentication and database services, and <strong>Tailwind CSS</strong> for styling. <strong>All templates, themes, and page designs were created entirely by the team from scratch.</strong> No pre-built website templates or pre-designed themes were used at any point in the development of this site.
+      </div>
+    </section>
 
-  <!-- ── Framework Statement ── -->
-  <section style="margin-bottom: 40px;">
-    <h2 style="font-size: 1.25rem; font-weight: 700; color: #1a3a5c; margin-bottom: 14px;">Framework Statement</h2>
-    <div style="border-left: 4px solid #2e6da4; padding: 14px 18px; background: #f4f8ff; border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.65;">
-      This website was built using <strong>Node.js</strong>, <strong>Express.js</strong>, and <strong>Nunjucks</strong> as frameworks, along with <strong>Vite</strong> for frontend bundling, <strong>Firebase</strong> for authentication and database services, and <strong>Tailwind CSS</strong> for styling. <strong>All templates, themes, and page designs were created entirely by the team from scratch.</strong> No pre-built website templates or pre-designed themes were used at any point in the development of this site.
-    </div>
-  </section>
+    <!-- ── Sources of Information ── -->
+    <section style="margin-bottom: 40px;">
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: #1a3a5c; margin-bottom: 14px;">Sources of Information</h2>
 
-  <!-- ── Sources of Information ── -->
-  <section style="margin-bottom: 40px;">
-    <h2 style="font-size: 1.25rem; font-weight: 700; color: #1a3a5c; margin-bottom: 14px;">Sources of Information</h2>
+      <h3 style="font-size: 1rem; font-weight: 700; color: #2e6da4; margin: 18px 0 8px;">Community Resources &amp; Content</h3>
+      <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+        <thead>
+          <tr style="background:#1a3a5c; color:#fff;">
+            <th style="padding:8px 12px; text-align:left;">Source</th>
+            <th style="padding:8px 12px; text-align:left;">URL</th>
+            <th style="padding:8px 12px; text-align:left;">Used For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Fulfill NJ</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://fulfillnj.org/" target="_blank" rel="noopener" style="color:#2e6da4;">fulfillnj.org</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description, contact information</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">180 Turning Lives Around</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://180nj.org/" target="_blank" rel="noopener" style="color:#2e6da4;">180nj.org</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description, services offered</td>
+          </tr>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Marlboro Teen Advisory Committee</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://www.marlboro-nj.gov/pages/teen-advisory-committee" target="_blank" rel="noopener" style="color:#2e6da4;">marlboro-nj.gov</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description and program details</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Marlboro Farmers' Market</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://www.marlboro-nj.gov/pages/farmers-market" target="_blank" rel="noopener" style="color:#2e6da4;">marlboro-nj.gov</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Market schedule and description</td>
+          </tr>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Shore To Help</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://shore-to-help.com/" target="_blank" rel="noopener" style="color:#2e6da4;">shore-to-help.com</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Organization description and supported charities</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">JBJ Soul Kitchen</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://www.jbjsoulkitchen.org/" target="_blank" rel="noopener" style="color:#2e6da4;">jbjsoulkitchen.org</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description and mission</td>
+          </tr>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Friendship Circle of New Jersey</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://njfriendshipcircle.org/" target="_blank" rel="noopener" style="color:#2e6da4;">njfriendshipcircle.org</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description and programs offered</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Monmouth County Official Website</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://www.co.monmouth.nj.us/" target="_blank" rel="noopener" style="color:#2e6da4;">co.monmouth.nj.us</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Community information, municipality links, historical context, public documents</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <h3 style="font-size: 1rem; font-weight: 700; color: #2e6da4; margin: 18px 0 8px;">Community Resources &amp; Content</h3>
-    <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
-      <thead>
-        <tr style="background:#1a3a5c; color:#fff;">
-          <th style="padding:8px 12px; text-align:left;">Source</th>
-          <th style="padding:8px 12px; text-align:left;">URL</th>
-          <th style="padding:8px 12px; text-align:left;">Used For</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Fulfill NJ</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://fulfillnj.org/" target="_blank" rel="noopener" style="color:#2e6da4;">fulfillnj.org</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description, contact information</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">180 Turning Lives Around</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://180nj.org/" target="_blank" rel="noopener" style="color:#2e6da4;">180nj.org</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description, services offered</td>
-        </tr>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Marlboro Teen Advisory Committee</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://www.marlboro-nj.gov/pages/teen-advisory-committee" target="_blank" rel="noopener" style="color:#2e6da4;">marlboro-nj.gov</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description and program details</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Marlboro Farmers' Market</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://www.marlboro-nj.gov/pages/farmers-market" target="_blank" rel="noopener" style="color:#2e6da4;">marlboro-nj.gov</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Market schedule and description</td>
-        </tr>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Shore To Help</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://shore-to-help.com/" target="_blank" rel="noopener" style="color:#2e6da4;">shore-to-help.com</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Organization description and supported charities</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">JBJ Soul Kitchen</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://www.jbjsoulkitchen.org/" target="_blank" rel="noopener" style="color:#2e6da4;">jbjsoulkitchen.org</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description and mission</td>
-        </tr>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Friendship Circle of New Jersey</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://njfriendshipcircle.org/" target="_blank" rel="noopener" style="color:#2e6da4;">njfriendshipcircle.org</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource description and programs offered</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Monmouth County Official Website</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://www.co.monmouth.nj.us/" target="_blank" rel="noopener" style="color:#2e6da4;">co.monmouth.nj.us</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Community information, municipality links, historical context, public documents</td>
-        </tr>
-      </tbody>
-    </table>
+      <h3 style="font-size: 1rem; font-weight: 700; color: #2e6da4; margin: 22px 0 8px;">Frameworks &amp; Libraries</h3>
+      <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+        <thead>
+          <tr style="background:#1a3a5c; color:#fff;">
+            <th style="padding:8px 12px; text-align:left;">Framework / Library</th>
+            <th style="padding:8px 12px; text-align:left;">Source</th>
+            <th style="padding:8px 12px; text-align:left;">Used For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Node.js</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://nodejs.org/" target="_blank" rel="noopener" style="color:#2e6da4;">nodejs.org</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Server-side JavaScript runtime</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Express.js</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://expressjs.com/" target="_blank" rel="noopener" style="color:#2e6da4;">expressjs.com</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Web server framework and routing</td>
+          </tr>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Nunjucks</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener" style="color:#2e6da4;">mozilla.github.io/nunjucks</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">HTML templating engine</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Vite</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://vitejs.dev/" target="_blank" rel="noopener" style="color:#2e6da4;">vitejs.dev</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Frontend bundler for JavaScript modules</td>
+          </tr>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Firebase (Google)</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://firebase.google.com/" target="_blank" rel="noopener" style="color:#2e6da4;">firebase.google.com</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">User authentication, Firestore database, Realtime Database (forum)</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Tailwind CSS</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://tailwindcss.com/" target="_blank" rel="noopener" style="color:#2e6da4;">tailwindcss.com</a></td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Utility-first CSS styling and responsive design</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <h3 style="font-size: 1rem; font-weight: 700; color: #2e6da4; margin: 22px 0 8px;">Frameworks &amp; Libraries</h3>
-    <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
-      <thead>
-        <tr style="background:#1a3a5c; color:#fff;">
-          <th style="padding:8px 12px; text-align:left;">Framework / Library</th>
-          <th style="padding:8px 12px; text-align:left;">Source</th>
-          <th style="padding:8px 12px; text-align:left;">Used For</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Node.js</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://nodejs.org/" target="_blank" rel="noopener" style="color:#2e6da4;">nodejs.org</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Server-side JavaScript runtime</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Express.js</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://expressjs.com/" target="_blank" rel="noopener" style="color:#2e6da4;">expressjs.com</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Web server framework and routing</td>
-        </tr>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Nunjucks</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://mozilla.github.io/nunjucks/" target="_blank" rel="noopener" style="color:#2e6da4;">mozilla.github.io/nunjucks</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">HTML templating engine</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Vite</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://vitejs.dev/" target="_blank" rel="noopener" style="color:#2e6da4;">vitejs.dev</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Frontend bundler for JavaScript modules</td>
-        </tr>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Firebase (Google)</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://firebase.google.com/" target="_blank" rel="noopener" style="color:#2e6da4;">firebase.google.com</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">User authentication, Firestore database, Realtime Database (forum)</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Tailwind CSS</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;"><a href="https://tailwindcss.com/" target="_blank" rel="noopener" style="color:#2e6da4;">tailwindcss.com</a></td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Utility-first CSS styling and responsive design</td>
-        </tr>
-      </tbody>
-    </table>
+      <h3 style="font-size: 1rem; font-weight: 700; color: #2e6da4; margin: 22px 0 8px;">Images &amp; Media</h3>
+      <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+        <thead>
+          <tr style="background:#1a3a5c; color:#fff;">
+            <th style="padding:8px 12px; text-align:left;">Asset</th>
+            <th style="padding:8px 12px; text-align:left;">Source / Credit</th>
+            <th style="padding:8px 12px; text-align:left;">Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">nature-bg.jpg</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Public domain / royalty-free</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Hero section background image</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">monmouth-county.jpg</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Public domain / royalty-free</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">About page header image</td>
+          </tr>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">fulfill.jpg, shore.png, friendship.jpg, marlboro.jpg</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Respective organization websites (used for informational/educational purposes)</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource spotlight cards</td>
+          </tr>
+          <tr style="background:#eef3f9;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">qr-1.jpg, qr-2.jpg, qr-3.jpg</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Generated by team using QR code tools</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Footer social media QR codes</td>
+          </tr>
+          <tr style="background:#fff;">
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">menu-button.png</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Created by team / royalty-free icon</td>
+            <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Navigation hamburger menu icon</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    <h3 style="font-size: 1rem; font-weight: 700; color: #2e6da4; margin: 22px 0 8px;">Images &amp; Media</h3>
-    <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
-      <thead>
-        <tr style="background:#1a3a5c; color:#fff;">
-          <th style="padding:8px 12px; text-align:left;">Asset</th>
-          <th style="padding:8px 12px; text-align:left;">Source / Credit</th>
-          <th style="padding:8px 12px; text-align:left;">Usage</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">nature-bg.jpg</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Public domain / royalty-free</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Hero section background image</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">monmouth-county.jpg</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Public domain / royalty-free</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">About page header image</td>
-        </tr>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">fulfill.jpg, shore.png, friendship.jpg, marlboro.jpg</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Respective organization websites (used for informational/educational purposes)</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Resource spotlight cards</td>
-        </tr>
-        <tr style="background:#eef3f9;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">qr-1.jpg, qr-2.jpg, qr-3.jpg</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Generated by team using QR code tools</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Footer social media QR codes</td>
-        </tr>
-        <tr style="background:#fff;">
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">menu-button.png</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Created by team / royalty-free icon</td>
-          <td style="padding:7px 12px; border-bottom:1px solid #dde6f0;">Navigation hamburger menu icon</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <p style="font-size: 0.85rem; color: #888; margin-top: 12px;">
+      All external content is used for informational and educational purposes in accordance with fair use guidelines. This website was created as a student project for the TSA Webmaster 1 event.
+    </p>
 
-  <p style="font-size: 0.85rem; color: #888; margin-top: 12px;">
-    All external content is used for informational and educational purposes in accordance with fair use guidelines. This website was created as a student project for the TSA Webmaster 1 event.
-  </p>
-
+  </div>
 </div>
 
 <script>
