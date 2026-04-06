@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work Log – TSA Webmaster 2025-2026</title>
+  <style>
+    /* ── Screen & Print Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 11pt;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 32px 40px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .doc-header {
+      border-bottom: 3px solid #1a3a5c;
+      padding-bottom: 14px;
+      margin-bottom: 24px;
+    }
+    .doc-header h1 {
+      font-size: 20pt;
+      color: #1a3a5c;
+      letter-spacing: 0.5px;
+    }
+    .doc-header h2 {
+      font-size: 13pt;
+      color: #2e6da4;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+      margin-top: 14px;
+    }
+    .meta-item { font-size: 10pt; }
+    .meta-item strong { color: #1a3a5c; }
+
+    /* ── Section Titles ── */
+    h3.section-title {
+      font-size: 13pt;
+      color: #fff;
+      background: #1a3a5c;
+      padding: 6px 12px;
+      margin: 28px 0 12px;
+      border-radius: 3px;
+    }
+
+    /* ── Tables ── */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 9.5pt;
+      margin-bottom: 8px;
+    }
+    thead tr {
+      background: #2e6da4;
+      color: #fff;
+    }
+    thead th {
+      padding: 7px 10px;
+      text-align: left;
+      font-weight: 600;
+    }
+    tbody tr:nth-child(even) { background: #eef3f9; }
+    tbody tr:nth-child(odd)  { background: #fff; }
+    tbody td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #d0d8e4;
+      vertical-align: top;
+    }
+    tbody tr:last-child td { border-bottom: none; }
+
+    /* ── Totals row ── */
+    tr.total-row td {
+      font-weight: 700;
+      background: #1a3a5c !important;
+      color: #fff;
+      border-bottom: none;
+    }
+
+    /* ── Feature checklist ── */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      columns: 2;
+      column-gap: 24px;
+    }
+    .feature-list li {
+      padding: 4px 0 4px 20px;
+      position: relative;
+      font-size: 10pt;
+      border-bottom: 1px solid #e8edf3;
+    }
+    .feature-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #2e6da4;
+      font-weight: 700;
+    }
+
+    /* ── Role grid ── */
+    .role-table td:first-child { font-weight: 600; color: #1a3a5c; width: 120px; }
+
+    /* ── Firebase schema ── */
+    .schema-block {
+      background: #f4f7fc;
+      border-left: 4px solid #2e6da4;
+      padding: 10px 14px;
+      font-family: 'Courier New', monospace;
+      font-size: 9pt;
+      white-space: pre;
+      line-height: 1.55;
+      margin-bottom: 8px;
+    }
+
+    /* ── Footer ── */
+    .doc-footer {
+      margin-top: 32px;
+      border-top: 2px solid #1a3a5c;
+      padding-top: 10px;
+      font-size: 9pt;
+      color: #555;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* ── Print overrides ── */
+    @media print {
+      body { padding: 0; font-size: 10pt; }
+      h3.section-title { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      thead tr { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      tbody tr:nth-child(even) { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      tr.total-row td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .schema-block { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      table { page-break-inside: auto; }
+      tr { page-break-inside: avoid; }
+      h3.section-title { page-break-after: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       DOCUMENT HEADER
+  ══════════════════════════════════════════════════════ -->
+  <div class="doc-header">
+    <h1>TSA Webmaster 1 — Work Log</h1>
+    <h2>2025–2026 National TSA Conference</h2>
+    <div class="meta-grid">
+      <div class="meta-item"><strong>Event:</strong> Webmaster 1</div>
+      <div class="meta-item"><strong>Topic:</strong> Community Resource Hub</div>
+      <div class="meta-item"><strong>School:</strong> High Technology High School</div>
+      <div class="meta-item"><strong>Community Theme:</strong> Monmouth County, New Jersey</div>
+      <div class="meta-item"><strong>Team Members:</strong> Vee M., Maria H., Maya B., Navya D., Grace Z., Anish B.</div>
+      <div class="meta-item"><strong>Submission Deadline:</strong> April 1, 2026 – 11:59 PM</div>
+      <div class="meta-item"><strong>Repository:</strong> github.com/Marinaccio08/tsa-webmaster-1-2026</div>
+      <div class="meta-item"><strong>Log Prepared:</strong> April 1, 2026</div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 1 – PROJECT OVERVIEW
+  ══════════════════════════════════════════════════════ -->
+  <h3 class="section-title">1. Project Overview</h3>
+  <p style="line-height:1.6; font-size:10.5pt;">
+    This project is a <strong>Community Resource Hub</strong> web application built for the 2025–2026 TSA Webmaster 1 event. The site serves Monmouth County, New Jersey residents by consolidating local non-profits, support services, community events, programs, and hotlines into a single, searchable platform. Key features include: an interactive resource directory with search and tag-based filtering, a spotlight/highlight section featuring three or more community organizations, a public resource-submission form, a community discussion forum, Firebase-backed user authentication, and customizable user profiles.
+  </p>
+  <p style="line-height:1.6; font-size:10.5pt; margin-top:10px;">
+    The website is built with <strong>Node.js / Express</strong> on the backend, <strong>Nunjucks</strong> for HTML templating, <strong>Vite</strong> for frontend bundling, <strong>Firebase</strong> for authentication and real-time database, and <strong>Tailwind CSS</strong> for responsive styling. All code was written from scratch by the team; no pre-built templates or themes were used.
+  </p>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 2 – TEAM ROLES & TASK ASSIGNMENTS
+  ══════════════════════════════════════════════════════ -->
+  <h3 class="section-title">2. Team Roles &amp; Task Assignments</h3>
+  <table class="role-table">
+    <thead>
+      <tr>
+        <th>Member</th>
+        <th>GitHub Handle</th>
+        <th>Assigned Tasks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Navya D.</td>
+        <td>Navya Dandriyal</td>
+        <td>Content page (events, resources, opportunities, recent news); About Monmouth County page (local history, municipality links); Design team; page styling and QR code assets</td>
+      </tr>
+      <tr>
+        <td>Grace Z.</td>
+        <td>Grace Zheng</td>
+        <td>Index (home) page; Contact Us form; GitHub Actions CI/CD workflow; overall CSS polish and responsive layout; resource additions</td>
+      </tr>
+      <tr>
+        <td>Anish B.</td>
+        <td>iRxfty</td>
+        <td>Discussion forum (frontend &amp; Firebase Realtime Database integration); Firebase API key management and environment configuration; Vite bundler setup; mobile-responsive design; resource management system; deployment fixes for Render; Design team</td>
+      </tr>
+      <tr>
+        <td>Vee M.</td>
+        <td>Vee</td>
+        <td>Initial repository setup; user registration, sign-in, sign-out (Firebase Auth); profile customization; filtering system; likes/dislikes system</td>
+      </tr>
+      <tr>
+        <td>Maria H.</td>
+        <td>Marinaccio08</td>
+        <td>Forum co-development; Node.js / Express setup; register.js implementation; footer design; navigation routing; copyright checklist; project README</td>
+      </tr>
+      <tr>
+        <td>Maya B.</td>
+        <td>hummingbee57</td>
+        <td>Resource directory page; resource-submission form (frontend &amp; backend); filtering system; Express server setup; Nunjucks templating; Firebase setup; Tailwind CSS configuration; environment variable management</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="font-size:9.5pt; color:#555; margin-top:6px;"><em>Design Team: Navya D., Grace Z., Anish B.</em></p>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 3 – MEETING LOG
+  ══════════════════════════════════════════════════════ -->
+  <h3 class="section-title">3. Meeting Log</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:110px;">Date</th>
+        <th style="width:180px;">Location / Format</th>
+        <th style="width:160px;">Attendees</th>
+        <th style="width:60px;">Duration</th>
+        <th>Topics &amp; Outcomes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dec 17, 2025</td>
+        <td>High Technology High School (in-person)</td>
+        <td>All 6 members</td>
+        <td>~1.5 hrs</td>
+        <td>
+          Kickoff meeting. Installed VSCode and GitHub Desktop for members who did not have them. Explained git workflow: commits, pulls, pushes, merges, and how to clone a repository while avoiding merge conflicts. Created the main GitHub repository (Marinaccio08/tsa-webmaster-1-2026). Created the initial <code>main.html</code> page and made the initial commit to establish the project baseline.
+        </td>
+      </tr>
+      <tr>
+        <td>Feb 1, 2026</td>
+        <td>Virtual (online meeting)</td>
+        <td>All 6 members</td>
+        <td>~1.5 hrs</td>
+        <td>
+          Planning session. Defined all website pages and feature set. Laid out the full feature list (resource directory, highlight section, submission form, forum, user accounts, profile customization, filtering, likes/dislikes). Assigned individual roles and tasks to each team member (see Section 2). Created the project timeline with milestone deadlines (see Section 4). Discussed Monmouth County as the community theme and confirmed the Firebase + Node.js tech stack. Decided on Tailwind CSS for styling and emphasized the importance of styling as development progresses.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 4 – DEVELOPMENT LOG (MILESTONE TIMELINE)
+  ══════════════════════════════════════════════════════ -->
+  <h3 class="section-title">4. Development Log &amp; Milestone Timeline</h3>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:95px;">Date</th>
+        <th style="width:130px;">Member(s)</th>
+        <th>Task / Work Completed</th>
+        <th style="width:55px;">Hrs</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- December -->
+      <tr>
+        <td>Dec 17, 2025</td>
+        <td>Vee M.</td>
+        <td>Initial commit — established repository structure and project baseline.</td>
+        <td>0.5</td>
+      </tr>
+      <tr>
+        <td>Dec 17, 2025</td>
+        <td>Maria H.</td>
+        <td>Created <code>index.html</code> — first HTML page for the project.</td>
+        <td>1.0</td>
+      </tr>
+
+      <!-- February – Week 1 -->
+      <tr>
+        <td>Feb 4, 2026</td>
+        <td>Team Member</td>
+        <td>Node.js project initialization — set up package.json, installed core dependencies.</td>
+        <td>1.5</td>
+      </tr>
+      <tr>
+        <td>Feb 3, 2026</td>
+        <td>Grace Z.</td>
+        <td>Added GitHub Actions CI/CD workflow (Jekyll site build pipeline) to automate deployment.</td>
+        <td>1.0</td>
+      </tr>
+      <tr>
+        <td>Feb 8, 2026</td>
+        <td>Maya B.</td>
+        <td>Firebase project setup — configured Firebase app, connected Firestore and Realtime Database. Established Firebase data schema: <code>Resources</code> collection (resourceID, resourceName, type, streetAddress, town, zip, phone, email, startDate, endDate, date, link, description, tags) and <code>Users</code> collection (userID, email, encryptedPassword, username, firstName, lastName, description).</td>
+        <td>2.5</td>
+      </tr>
+      <tr>
+        <td>Feb 17, 2026</td>
+        <td>Maria H.</td>
+        <td>Updated project README with setup and contribution instructions.</td>
+        <td>0.5</td>
+      </tr>
+      <tr>
+        <td>Feb 17, 2026</td>
+        <td>Anish B.</td>
+        <td>Added Vite as a dev dependency and regenerated the lockfile for client-side JavaScript bundling.</td>
+        <td>0.5</td>
+      </tr>
+
+      <!-- February – Week 2 (Express / Base Setup) -->
+      <tr>
+        <td>Feb 18, 2026</td>
+        <td>Maya B.</td>
+        <td>Set up Express.js server and Nunjucks HTML templating engine — defined core project structure and view rendering pipeline.</td>
+        <td>3.0</td>
+      </tr>
+      <tr>
+        <td>Feb 19, 2026</td>
+        <td>Maya B.</td>
+        <td>Fixed <code>server.js</code> routing issues from initial Express setup.</td>
+        <td>1.0</td>
+      </tr>
+      <tr>
+        <td>Feb 20, 2026</td>
+        <td>Maya B.</td>
+        <td>Added <code>.env</code> file with Firebase environment variables to secure API credentials.</td>
+        <td>0.5</td>
+      </tr>
+
+      <!-- February – Week 3 (Frontend Base Pages) -->
+      <tr>
+        <td>Feb 22, 2026</td>
+        <td>Grace Z.</td>
+        <td>Built base HTML structure, navigation, and footer for the index (home) page. Updated Home link routing. Established page-level navigation conventions.</td>
+        <td>2.5</td>
+      </tr>
+      <tr>
+        <td>Feb 22, 2026</td>
+        <td>Maya B.</td>
+        <td>Started resource submission form frontend. Set up Tailwind CSS configuration. Restored <code>styles.css</code> for global styling. Made initial styling adjustments.</td>
+        <td>3.0</td>
+      </tr>
+      <tr>
+        <td>Feb 23, 2026</td>
+        <td>Maria H.</td>
+        <td>Implemented page-to-page navigation routing across the site.</td>
+        <td>1.5</td>
+      </tr>
+      <tr>
+        <td>Feb 24, 2026</td>
+        <td>Anish B.</td>
+        <td>Removed inline Firebase configuration from <code>template.html</code> and migrated API keys to a secure environment variable file. Improved security posture of credential management.</td>
+        <td>1.5</td>
+      </tr>
+
+      <!-- March – Week 1 (Auth, Registration, Firebase) -->
+      <tr>
+        <td>Mar 1, 2026</td>
+        <td>Maya B.</td>
+        <td>Renamed <code>index.js</code> → <code>config.js</code> for clarity. Resolved environment variable configuration conflicts. Removed Tailwind preflight conflicts and cleaned up form JavaScript.</td>
+        <td>2.0</td>
+      </tr>
+      <tr>
+        <td>Mar 1, 2026</td>
+        <td>Maria H.</td>
+        <td>Created <code>register.js</code> for frontend registration logic. Fixed Tailwind CSS configuration error. Resolved a process environment bug causing server startup failures (later partially reverted and re-fixed).</td>
+        <td>2.5</td>
+      </tr>
+      <tr>
+        <td>Mar 1, 2026</td>
+        <td>Anish B.</td>
+        <td>Implemented full Firebase user registration — moved registration script to <code>src/</code> directory, updated Firebase configuration to use Vite environment variables for secure client-side access. Resolved merge conflicts with the main branch. Implemented user authentication with dynamic navigation (showing signed-in user's name in header, sign-out button). Built dedicated sign-in form page.</td>
+        <td>4.0</td>
+      </tr>
+
+      <!-- March – Week 2 (Styling, Form, Directory) -->
+      <tr>
+        <td>Mar 7, 2026</td>
+        <td>Anish B.</td>
+        <td>Implemented discussion forum functionality — Firebase Realtime Database integration for storing threads and replies, thread creation UI, reply system, and dedicated forum CSS styling.</td>
+        <td>4.0</td>
+      </tr>
+      <tr>
+        <td>Mar 12–13, 2026</td>
+        <td>Team Member</td>
+        <td>General styling work across multiple pages — refined visual layout, spacing, and typography.</td>
+        <td>2.0</td>
+      </tr>
+      <tr>
+        <td>Mar 15–16, 2026</td>
+        <td>Grace Z.</td>
+        <td>Updated and refined index page — improved hero section content, button styles, and overall page layout. Minor button styling adjustments across the site.</td>
+        <td>2.5</td>
+      </tr>
+      <tr>
+        <td>Mar 20, 2026</td>
+        <td>Maya B.</td>
+        <td>Styled the resource submission page. Fixed form submission behavior so the page no longer requires a manual reload after submitting a resource.</td>
+        <td>2.5</td>
+      </tr>
+      <tr>
+        <td>Mar 20, 2026</td>
+        <td>Maria H.</td>
+        <td>Designed and implemented the site-wide footer with contact information, social media links, and navigation links.</td>
+        <td>1.5</td>
+      </tr>
+      <tr>
+        <td>Mar 22, 2026</td>
+        <td>Anish B.</td>
+        <td>Added <code>nodemon</code> as a development dependency to enable automatic server restarts during development.</td>
+        <td>0.5</td>
+      </tr>
+      <tr>
+        <td>Mar 24, 2026</td>
+        <td>Maya B.</td>
+        <td>Styled resource submission form. Refined form layout, input fields, and submission button styling.</td>
+        <td>2.0</td>
+      </tr>
+
+      <!-- March – Week 3/4 (Directory, About, Final Content) -->
+      <tr>
+        <td>Mar 26, 2026</td>
+        <td>Maya B.</td>
+        <td>Built out the interactive resource directory page — categorized resource listings by type (non-profits, events, support services, hotlines, media).</td>
+        <td>3.0</td>
+      </tr>
+      <tr>
+        <td>Mar 26, 2026</td>
+        <td>Grace Z.</td>
+        <td>Multiple CSS and index page improvements — refined sign-in page styling, footer layout, and index page content. Minor bug fixes across pages.</td>
+        <td>3.0</td>
+      </tr>
+      <tr>
+        <td>Mar 27, 2026</td>
+        <td>Grace Z.</td>
+        <td>Additional CSS refinements across the site — spacing, typography, and visual consistency improvements.</td>
+        <td>1.5</td>
+      </tr>
+      <tr>
+        <td>Mar 29, 2026</td>
+        <td>Navya D.</td>
+        <td>Built two full web pages from scratch: (1) <strong>About Monmouth County</strong> — history, community info, municipality links; (2) <strong>Additional Content</strong> page — events, resources, opportunities, and recent news. Added CSS styling, QR code images to <code>public/images/</code>, and registered About page in site navigation (template.html).</td>
+        <td>5.0</td>
+      </tr>
+      <tr>
+        <td>Mar 30, 2026</td>
+        <td>Navya D.</td>
+        <td>Replaced placeholder links on the About page with accurate official Monmouth County municipality URLs.</td>
+        <td>1.0</td>
+      </tr>
+      <tr>
+        <td>Mar 30, 2026</td>
+        <td>Grace Z.</td>
+        <td>Added additional community resources to the directory. Removed a down-arrow/scroll button that was no longer needed.</td>
+        <td>1.5</td>
+      </tr>
+
+      <!-- April – Final Push -->
+      <tr>
+        <td>Apr 1, 2026</td>
+        <td>Anish B.</td>
+        <td>
+          Major final-push commits:
+          <ul style="margin:4px 0 0 16px; list-style:disc;">
+            <li>Implemented comprehensive mobile-responsive design across all pages (hamburger nav, responsive grids, media queries)</li>
+            <li>Updated navigation text colors for accessibility and visual consistency</li>
+            <li>Updated site content and refined forum UI styling</li>
+            <li>Added resource classification documentation (tags/category system)</li>
+            <li>Refactored footer — removed duplicate footer from add view, consolidated social media QR codes into main template footer</li>
+            <li>Implemented resource management system with Firebase database integration and UI form logic</li>
+            <li>Added Vite build configuration and set production mode so <code>src/</code> JS bundles are served correctly on Render</li>
+            <li>Fixed static asset serving — added <code>/assets</code> route, fixed menu-button path to root-relative</li>
+            <li>Upgraded GitHub Actions checkout action to v4.2.2 and fixed <code>git safe.directory</code> for Jekyll CI</li>
+            <li>Added <code>start</code> script to package.json and configured server to read port from environment variable for Render deployment</li>
+          </ul>
+        </td>
+        <td>6.0</td>
+      </tr>
+      <tr>
+        <td>Apr 1, 2026</td>
+        <td>Maria H.</td>
+        <td>Completed and attached the Student Copyright Checklist (PDF) as required by TSA competition rules. Uploaded to Google Drive and linked from the website Reference Page.</td>
+        <td>1.0</td>
+      </tr>
+      <tr>
+        <td>Apr 1, 2026</td>
+        <td>Anish B.</td>
+        <td>Created Reference Page listing all sources of information, framework statement, and links to Student Copyright Checklist and Work Log PDFs. Added Reference Page to site navigation and footer.</td>
+        <td>1.0</td>
+      </tr>
+
+      <!-- TOTAL -->
+      <tr class="total-row">
+        <td colspan="3" style="text-align:right; padding-right:12px;">TOTAL ESTIMATED HOURS</td>
+        <td>~71</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 5 – FEATURES IMPLEMENTED
+  ══════════════════════════════════════════════════════ -->
+  <h3 class="section-title">5. Features Implemented</h3>
+  <ul class="feature-list">
+    <li>Interactive resource directory (categorized)</li>
+    <li>Search and tag-based filtering</li>
+    <li>Spotlight / highlight section (3+ resources)</li>
+    <li>Resource submission form (public)</li>
+    <li>Firebase Firestore database backend</li>
+    <li>Firebase Realtime Database (forum)</li>
+    <li>User registration (Firebase Auth)</li>
+    <li>User sign-in / sign-out</li>
+    <li>Dynamic navigation (auth-aware header)</li>
+    <li>User profile customization</li>
+    <li>Discussion forum with threads &amp; replies</li>
+    <li>Likes / dislikes system</li>
+    <li>About Monmouth County page</li>
+    <li>Additional Content page (events, news)</li>
+    <li>Contact Us form</li>
+    <li>Mobile-responsive design</li>
+    <li>Reference page with required PDF links</li>
+    <li>Vite bundler (production build)</li>
+    <li>Render cloud deployment</li>
+    <li>GitHub Actions CI/CD pipeline</li>
+  </ul>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 6 – FIREBASE DATABASE SCHEMA
+  ══════════════════════════════════════════════════════ -->
+  <h3 class="section-title">6. Firebase Database Schema</h3>
+  <div class="schema-block">Resources/
+  [resourceID]/
+    resourceName     – string
+    type             – string  (non-profit | event | support | hotline | media | program)
+    streetAddress    – string  (as needed)
+    town             – string  (as needed)
+    zip              – string  (as needed)
+    phone            – string  (as needed)
+    email            – string  (as needed)
+    startDate        – string  (as needed)
+    endDate          – string  (as needed)
+    date             – string  (as needed)
+    link             – string  (as needed)
+    description      – string
+    tags             – array&lt;string&gt;
+
+Users/
+  [userID]/
+    email            – string
+    password         – string  (encrypted via Firebase Auth — not stored in plaintext)
+    username         – string
+    firstName        – string
+    lastName         – string
+    description      – string
+
+Forum/
+  [threadID]/
+    title            – string
+    body             – string
+    authorUID        – string
+    authorName       – string
+    timestamp        – number (Unix ms)
+    replies/
+      [replyID]/
+        body         – string
+        authorUID    – string
+        authorName   – string
+        timestamp    – number</div>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 7 – COMMUNITY RESOURCES ADDED
+  ══════════════════════════════════════════════════════ -->
+  <h3 class="section-title">7. Community Resources Added to Directory</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Resource Name</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Added By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fulfill NJ</td>
+        <td>Non-Profit / Food</td>
+        <td>Provides food assistance, meal programs, and support services to people facing hunger; also offers job training and nutrition education.</td>
+        <td>Grace Z.</td>
+      </tr>
+      <tr>
+        <td>180 Turning Lives Around</td>
+        <td>Support Service</td>
+        <td>Supports survivors of domestic violence and sexual assault through hotlines, safe housing, counseling, and legal assistance.</td>
+        <td>Grace Z.</td>
+      </tr>
+      <tr>
+        <td>Marlboro TAC (Teen Advisory Committee)</td>
+        <td>Community Program</td>
+        <td>Volunteer group for community events including soccer games, tutoring, and supervising school dances.</td>
+        <td>Maria H.</td>
+      </tr>
+      <tr>
+        <td>Marlboro Farmers' Market</td>
+        <td>Community Event</td>
+        <td>Seasonal market (June–October) where local farmers sell fresh produce on weekends and select weekdays.</td>
+        <td>Maria H.</td>
+      </tr>
+      <tr>
+        <td>Shore To Help</td>
+        <td>Non-Profit / Volunteering</td>
+        <td>Monmouth County non-profit connecting volunteers with local charities and organizing fundraisers benefiting organizations such as Cure Kids Cancer, Cole Porter Foundation, and the Food Bank of Monmouth and Ocean Counties.</td>
+        <td>Maria H.</td>
+      </tr>
+      <tr>
+        <td>JBJ Soul Kitchen</td>
+        <td>Non-Profit / Food</td>
+        <td>Pay-what-you-can community restaurant providing nutritious meals to those in need in Monmouth County.</td>
+        <td>Maya B.</td>
+      </tr>
+      <tr>
+        <td>Friendship Circle of New Jersey</td>
+        <td>Support Service</td>
+        <td>Provides social, recreational, and inclusion programs for individuals with special needs throughout New Jersey.</td>
+        <td>Maya B.</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       SECTION 8 – TECH STACK SUMMARY
+  ══════════════════════════════════════════════════════ -->
+  <h3 class="section-title">8. Technology Stack</h3>
+  <table>
+    <thead>
+      <tr><th>Technology</th><th>Purpose</th><th>Version</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Node.js</td><td>Server-side JavaScript runtime</td><td>LTS</td></tr>
+      <tr><td>Express.js</td><td>Web application framework / routing</td><td>^4.x</td></tr>
+      <tr><td>Nunjucks</td><td>HTML templating engine</td><td>^3.x</td></tr>
+      <tr><td>Vite</td><td>Frontend build tool / bundler</td><td>^6.x</td></tr>
+      <tr><td>vite-express</td><td>Vite + Express integration</td><td>latest</td></tr>
+      <tr><td>Firebase Auth</td><td>User authentication (register, sign-in, sign-out)</td><td>v11.x</td></tr>
+      <tr><td>Firebase Firestore</td><td>Resource and user data storage</td><td>v11.x</td></tr>
+      <tr><td>Firebase Realtime Database</td><td>Forum threads and replies (real-time updates)</td><td>v11.x</td></tr>
+      <tr><td>Tailwind CSS</td><td>Utility-first CSS framework for responsive styling</td><td>v4.x (browser CDN)</td></tr>
+      <tr><td>nodemon</td><td>Auto-restart server during development</td><td>latest</td></tr>
+      <tr><td>GitHub Actions</td><td>CI/CD pipeline (Jekyll build)</td><td>N/A</td></tr>
+      <tr><td>Render</td><td>Cloud hosting and deployment</td><td>N/A</td></tr>
+    </tbody>
+  </table>
+
+
+  <!-- ══════════════════════════════════════════════════════
+       DOCUMENT FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <div class="doc-footer">
+    <span>TSA Webmaster 1 — Work Log &nbsp;|&nbsp; High Technology High School &nbsp;|&nbsp; 2025–2026</span>
+    <span>Prepared: April 1, 2026</span>
+  </div>
+
+</body>
+</html>

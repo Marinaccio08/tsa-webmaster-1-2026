@@ -53,6 +53,10 @@ app.get("/directory", (req, res) => {
     res.render("directory.html", {resources: resources.resources})
 })
 
+app.get("/reference", (req, res) => {
+    res.render("reference.html")
+})
+
 const PORT = process.env.PORT || 5173;
 
 ViteExpress.listen(app, PORT, () => {
